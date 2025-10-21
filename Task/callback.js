@@ -1,23 +1,23 @@
-function dataprocess(cb1, cb2, cb3)
+function dataprocess(name, age, msg_log)
 {
     let data = {name : "Mugesh S", age : 21}
 
     console.log("Initial Data :")
     console.log("The name is " + data.name + " and his age is "+ data.age)
 
-    cb1(data, cb2, cb3)
+    name(data, age, msg_log)
 }
 
-function name_change(data, cb2, cb3)
+function name_change(data, age, msg_log)
 {
     data.name = "ABCD"
-    cb2(data, cb3)
+    age(data, msg_log)
 }
 
-function age_change(data, cb3)
+function age_change(data, msg_log)
 {
     data.age = 25
-    cb3(data)
+    msg_log(data)
 }
 
 function logger(data)
